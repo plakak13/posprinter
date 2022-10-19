@@ -12,8 +12,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bencomtech/react-native-esc-pos-printer.git",
-    "baseUrl": "https://github.com/bencomtech/react-native-esc-pos-printer"
+    "url": "git+https://github.com/plakak13/react-native-esc-pos-printer.git",
+    "baseUrl": "https://github.com/plakak13/react-native-esc-pos-printer"
   },
   "keywords": [
     "react-native",
@@ -21,8 +21,8 @@
     "printer"
   ],
   "author": {
-    "name": "Pichid Detson",
-    "email": "bencomtech@gmail.com"
+    "name": "Prajak Singchai",
+    "email": "s.prajak39@gmail.com"
   },
   "license": "MIT",
   "devDependencies": {
