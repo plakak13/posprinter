@@ -208,10 +208,25 @@ public class RNPosPrinterModule extends ReactContextBaseJavaModule {
                     Barcode barcode = new Barcode(barcodeType, param1, param2, param3, content);
                     printer.printBarCode(barcode);
                     break;
+                case "setEncoding":
+                    String charsetName = map.getString("charsetName");
+                    printer.setEncoding(charsetName);
+                    break;
             }
         }
 
         promise.resolve("DONE");
+    }
+
+    @ReactMethod
+    public void getEncoding(Promise promise){
+        try {
+            String encodingText = printer.getEncoding();
+            promise.resolve(encodingText);
+        } catch (Exception e) {
+            e.printStackTrace();
+            promise.reject("FAILED TO GET ENCODING", e.getMessage());
+        }
     }
 
     private WritableMap fromDevice(IDevice device) {

@@ -101,6 +101,11 @@ class PrinterModule {
     }
   }
 
+  public getEnCoding (): Promise<void> {
+    if (!isAndroid) return Promise.reject("IOS is not supported");
+    return this.printerModule.getEncoding();
+  }
+
   // listen all changed state from native events
   private listenToNativeEvent(start: boolean): void {
     if (start) {

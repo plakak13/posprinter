@@ -37,6 +37,18 @@ function setFont(
 }
 
 /**
+ * set font before you want to print text with custom font
+ * @param charsetName
+ */
+
+function setEncoding(charsetName: string){
+  return {
+    type: "setEncoding",
+    charsetName
+  }
+}
+
+/**
  * print text
  * @param text
  */
@@ -240,7 +252,8 @@ export const printerCommand = {
   printKeyValue46,
   setCharacterMultiple,
   printBarCode,
-  setLeftMargin
+  setLeftMargin,
+  setEncoding
 };
 
 export const printerTools = {
