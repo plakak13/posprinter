@@ -25,6 +25,14 @@ declare function setFont(width: number, height: number, bold: number, underline:
     underline: number;
 };
 /**
+ * set font before you want to print text with custom font
+ * @param charsetName
+ */
+declare function setEncoding(charsetName: string): {
+    type: string;
+    charsetName: string;
+};
+/**
  * print text
  * @param text
  */
@@ -154,7 +162,6 @@ export declare const PrinterConstants: {
         FONT_MODE: number;
         FONT_SIZE: number;
         CODE_PAGE: number;
-        CODE_PAGE_CP874: number;
     };
     BarcodeType: {
         UPC_A: number;
@@ -184,6 +191,7 @@ export declare const printerCommand: {
     setCharacterMultiple: typeof setCharacterMultiple;
     printBarCode: typeof printBarCode;
     setLeftMargin: typeof setLeftMargin;
+    setEncoding: typeof setEncoding;
 };
 export declare const printerTools: {
     generateKeyValuePair: typeof generateKeyValuePair;

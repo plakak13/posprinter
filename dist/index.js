@@ -130,6 +130,11 @@ var PrinterModule = /** @class */ (function () {
             });
         });
     };
+    PrinterModule.prototype.getEnCoding = function () {
+        if (!isAndroid)
+            return Promise.reject("IOS is not supported");
+        return this.printerModule.getEncoding();
+    };
     // listen all changed state from native events
     PrinterModule.prototype.listenToNativeEvent = function (start) {
         var _this = this;

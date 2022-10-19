@@ -27,6 +27,16 @@ function setFont(width, height, bold, underline) {
     };
 }
 /**
+ * set font before you want to print text with custom font
+ * @param charsetName
+ */
+function setEncoding(charsetName) {
+    return {
+        type: "setEncoding",
+        charsetName: charsetName
+    };
+}
+/**
  * print text
  * @param text
  */
@@ -178,8 +188,7 @@ exports.PrinterConstants = {
         CHARACTER_RIGHT_MARGIN: 11,
         FONT_MODE: 16,
         FONT_SIZE: 17,
-        CODE_PAGE: 18,
-        CODE_PAGE_CP874: 47
+        CODE_PAGE: 18
     },
     BarcodeType: {
         UPC_A: 0,
@@ -208,7 +217,8 @@ exports.printerCommand = {
     printKeyValue46: printKeyValue46,
     setCharacterMultiple: setCharacterMultiple,
     printBarCode: printBarCode,
-    setLeftMargin: setLeftMargin
+    setLeftMargin: setLeftMargin,
+    setEncoding: setEncoding
 };
 exports.printerTools = {
     generateKeyValuePair: generateKeyValuePair,

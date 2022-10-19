@@ -13,6 +13,7 @@ declare class PrinterModule {
     stopScanDevices(): Promise<boolean>;
     connectDevice(deviceID: string, timeout?: number): Promise<any>;
     printTestReceipt(storageUrl?: string): Promise<void>;
+    getEnCoding(): Promise<void>;
     private listenToNativeEvent;
     private log;
 }
